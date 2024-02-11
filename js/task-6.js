@@ -41,8 +41,13 @@ function getANumber() {
 
 function createBoxes(amount) {
   console.log(`I'm create boxes ${amount}`);
-
-  let string = `<div class = 'container' slyle = "width = 200px" ><div style = "background-color: red; width :30px ; height: 30px ; "> this is empty div</div></div>`;
+  let size = 30;
+  let color = getRandomHexColor();
+  let subString = `<div style="background-color: ${color}; width : ${size}px ; height: ${size}px ; ">
+      this is empty div
+    </div>`;
+  let string = `<div slyle = "display: flex;"> ${subString} </div>`;
+  console.log(string);
   boxes.insertAdjacentHTML('beforeend', string);
 }
 

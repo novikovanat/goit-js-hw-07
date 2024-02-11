@@ -3,6 +3,56 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+const text = `I can't believe life's so complex
+When I just wanna sit here and watch you undress
+I can't believe life's so complex
+When I just wanna sit here and watch you undress
+This is love, this is love that I'm feelin'
+This is love, this is love that I'm feelin'
+This is love, love, love that I'm feelin'
+Does it have to be a life full of dread?
+Wanna chase you 'round the table, wanna touch your head
+Does it have to be a life full of dread?
+Wanna chase you 'round the table, wanna touch your head
+
+This is love, this is love that I'm feelin'
+This is love, this is love that I'm feelin'
+This is love, love, love, love that I'm feelin'
+
+I can't believe that the axis turns
+On suffering when you taste so good
+I can't believe that the axis turns
+On suffering when my head it burns
+
+Now, love, love, love that I'm feelin'
+This is love, this is love that I'm feelin'
+This is love, love, love, love that I'm feelin'
+
+Even in the summer, even in the spring
+You'll never get too much of a wonderful thing
+
+You're the only story that I've never told
+You're my dirty little secret, wanna keep you so
+You're the only story that I've never been told
+You're my dirty little secret, wanna keep you so
+
+Come on out, come on over, help me forget
+Keep the walls from falling as they're tumbling in
+Come on out, come on over, help me forget
+Keep the walls from falling on me tumbling in
+Keep the walls from falling as they're tumbling in
+
+This is love, this is love that I'm feelin'
+This is love, this is love that I'm feelin'
+This is love, this is love that I'm feelin'
+This is love, love, love, love that I'm feelin'
+
+This is love, love, love that I'm feelin'
+This is love, love, love that I'm feelin'
+This is love, love, love, love that I'm feelin'
+This is love, this is love that I'm feelin'
+`;
+console.log(text);
 
 const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
@@ -41,12 +91,21 @@ function getANumber() {
 
 function createBoxes(amount) {
   console.log(`I'm create boxes ${amount}`);
-  let size = 30;
-  let color = getRandomHexColor();
-  let subString = `<div style="background-color: ${color}; width : ${size}px ; height: ${size}px ; ">
-      this is empty div
+
+  let i = 0;
+  let subString = '';
+  for (
+    let size = 30, fontSize = 4;
+    i < amount;
+    size += 10, fontSize += 1, i++
+  ) {
+    let color = getRandomHexColor();
+    subString += `<div style= "font-size: ${fontSize}px; text-align: center; background-color: ${color}; width : ${size}px ; height: ${size}px ; ">
+       I can't believe life's so complex
     </div>`;
-  let string = `<div slyle = "display: flex;"> ${subString} </div>`;
+    console.log(subString);
+  }
+  let string = `<div  style = " margin: 10px; display: flex; flex-wrap: wrap;"> ${subString}</div>`;
   console.log(string);
   boxes.insertAdjacentHTML('beforeend', string);
 }

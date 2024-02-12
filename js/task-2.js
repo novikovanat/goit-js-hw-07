@@ -28,30 +28,9 @@ const images = [
 const string = images.slice(0, 3).reduce((previousString, image) => {
   return (
     previousString +
-    `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" width = "360px"></li>`
+    `<li class="gallery-item"><img class ="img" src="${image.url}" alt="${image.alt}"></li>`
   );
 }, '');
-console.log(string);
 
 const gallery = document.querySelector('.gallery');
 const galleryOfImages = gallery.insertAdjacentHTML('afterbegin', string);
-const galleryItem = gallery.firstChild;
-console.log(galleryItem);
-const photos = gallery.querySelector('img');
-console.log(photos);
-
-gallery.style.flexWrap = 'wrap';
-gallery.style.margin = '0';
-gallery.style.padding = '0';
-gallery.style.display = 'flex';
-gallery.style.listStyleType = 'none';
-
-// const photoSet = photos.forEach(photo => {
-photos.slyle.display = 'block';
-// photos.slyle.borderRadius = '50%';
-// });
-
-// galleryItem.style.width = 'calc((100% - 24px) / 3)';
-// galleryItem.style.backgroundColor = 'red';
-// gallery.style.displayFlex = flexWrap;
-// photos.slyle.display = 'display';

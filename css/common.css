@@ -54,3 +54,21 @@ body {
   line-height: 24px;
   letter-spacing: 0.04em;
 }
+
+.gallery {
+  width: 1128px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 24px auto;
+}
+
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+
+}
+
+.img {
+  width: 360px;
+  height: 300px;
+}

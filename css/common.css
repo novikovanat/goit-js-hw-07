@@ -126,3 +126,19 @@ div button {
 .widget p {
   text-align: center;
 }
+
+#controls button {
+  margin: 0;
+}
+
+#controls input {
+  width: 150px;
+}
+
+[data-destroy] {
+  background-color: #FF4E4E;
+}
+
+#controls {
+  padding: 24px;
+}

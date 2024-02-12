@@ -70,7 +70,7 @@ function wipe() {
 }
 
 function createHandler() {
-  console.log(createBoxes(amount));
+  createBoxes(amount);
   amount = 0;
 }
 

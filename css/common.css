@@ -80,16 +80,36 @@ input {
   border: 1px solid #808080;
   border-radius: 4px;
   margin: 24px 0 0 24px;
+  padding: 12px;
 }
 
-input::placeholder {
+input::placeholder,
+.login-form,
+button {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  padding: 12px;
   color: #2E2F42;
 }
 
 input+h1 {
   margin: 16px 0 0 24px;
+}
+
+label {
+  margin: 8px 0 16px 24px;
+}
+
+label>input {
+  display: block;
+  margin-top: 8px;
+}
+
+button {
+  width: 86px;
+  height: 40px;
+  margin: 16px 0 0 24px;
+  background-color: #4E75FF;
+  border: none;
+  border-radius: 4px;
 }

@@ -70,8 +70,11 @@ function wipe() {
 }
 
 function createHandler() {
-  createBoxes(amount);
-  amount = 0;
+  if (amount < 1) {
+  } else {
+    createBoxes(amount);
+    amount = 0;
+  }
 }
 
 function createBoxes(amount) {

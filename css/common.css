@@ -116,11 +116,14 @@ button {
 
 div button {
   width: 148px;
-  margin-left: 265px;
+  display: block;
+  margin: 16px auto 0 auto;
+
 }
 
 .widget {
-  margin: 88px 100px 88px 100px;
+  margin: 88px 100px;
+  /* padding: 0 200px; */
 }
 
 .widget p {

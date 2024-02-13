@@ -6,8 +6,6 @@ nameInput.addEventListener('input', showName);
 function showName(event) {
   const nameInputTrimmed = nameInput.value.trim();
 
-  nameInputTrimmed === ''
-    ? console.log('this is empty string')
-    : (nameOutput.textContent = nameInputTrimmed);
+  nameOutput.textContent =
+    nameInputTrimmed === '' ? 'Anonymous' : nameInputTrimmed;
 }
-nameInput.addEventListener('blur', () => (nameInput.value = ''));

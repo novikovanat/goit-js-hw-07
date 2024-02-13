@@ -153,8 +153,3 @@ div button {
   flex-wrap: wrap;
   gap: 16px;
 }
-
-.div-elem {
-  padding: 6px 3px;
-  text-align: center;
-}

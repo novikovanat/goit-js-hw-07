@@ -3,47 +3,6 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-const text = `I can't believe life's so complex
-When I just wanna sit here and watch you undress
-I can't believe life's so complex
-When I just wanna sit here and watch you undress
-This is love, this is love that I'm feelin'
-This is love, this is love that I'm feelin'
-This is love, love, love that I'm feelin'
-Does it have to be a life full of dread?
-Wanna chase you 'round the table, wanna touch your head
-Does it have to be a life full of dread?
-Wanna chase you 'round the table, wanna touch your head
-This is love, this is love that I'm feelin'
-This is love, this is love that I'm feelin'
-This is love, love, love, love that I'm feelin'
-I can't believe that the axis turns
-On suffering when you taste so good
-I can't believe that the axis turns
-On suffering when my head it burns
-Now, love, love, love that I'm feelin'
-This is love, this is love that I'm feelin'
-This is love, love, love, love that I'm feelin'
-Even in the summer, even in the spring
-You'll never get too much of a wonderful thing
-You're the only story that I've never told
-You're my dirty little secret, wanna keep you so
-You're the only story that I've never been told
-You're my dirty little secret, wanna keep you so
-Come on out, come on over, help me forget
-Keep the walls from falling as they're tumbling in
-Come on out, come on over, help me forget
-Keep the walls from falling on me tumbling in
-Keep the walls from falling as they're tumbling in
-This is love, this is love that I'm feelin'
-This is love, this is love that I'm feelin'
-This is love, this is love that I'm feelin'
-This is love, love, love, love that I'm feelin'
-This is love, love, love that I'm feelin'
-This is love, love, love that I'm feelin'
-This is love, love, love, love that I'm feelin'
-This is love, this is love that I'm feelin'
-PJ Harvey - This Is Love'`;
 
 const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
@@ -78,24 +37,11 @@ function createHandler() {
 }
 
 function createBoxes(amount) {
-  let textArray = text.split('\n');
   let i = 0;
   let subString = '';
-  for (
-    let size = 30, fontSize = 4;
-    i < amount;
-    size += 10, fontSize += 1, i++
-  ) {
-    let song;
-    if (textArray.length - 1 < i) {
-      song = textArray[textArray.length - 1];
-    } else {
-      song = textArray[i];
-    }
+  for (let size = 30; i < amount; size += 10, i++) {
     let color = getRandomHexColor();
-    let textColor = getRandomHexColor();
-    subString += `<div class ="div-elem" style= " color:${textColor}; font-size: ${fontSize}px; background-color: ${color}; width : ${size}px ; height: ${size}px ; ">
-       ${song}
+    subString += `<div style= "background-color: ${color}; width : ${size}px ; height: ${size}px ; ">
     </div>`;
   }
   let string = `<div class ="container"> ${subString}</div>`;

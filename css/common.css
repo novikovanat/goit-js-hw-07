@@ -146,3 +146,10 @@ div button {
 #controls {
   padding: 24px;
 }
+
+.container {
+  margin: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

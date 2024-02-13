@@ -100,7 +100,7 @@ function createBoxes(amount) {
        ${song}
     </div>`;
   }
-  let string = `<div  style = " margin: 10px; display: flex; flex-wrap: wrap;"> ${subString}</div>`;
+  let string = `<div class ="container"> ${subString}</div>`;
   boxes.innerHTML = string;
 }
 

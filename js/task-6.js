@@ -94,7 +94,7 @@ function createBoxes(amount) {
     }
     let color = getRandomHexColor();
     let textColor = getRandomHexColor();
-    subString += `<div style= " color:${textColor}; font-size: ${fontSize}px; text-align: center; background-color: ${color}; width : ${size}px ; height: ${size}px ; ">
+    subString += `<div class ="div-elem" style= " color:${textColor}; font-size: ${fontSize}px; background-color: ${color}; width : ${size}px ; height: ${size}px ; ">
        ${song}
     </div>`;
   }

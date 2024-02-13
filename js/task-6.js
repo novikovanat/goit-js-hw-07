@@ -78,7 +78,6 @@ function createHandler() {
 }
 
 function createBoxes(amount) {
-  console.log(`I'm create boxes ${amount}`);
   let textArray = text.split('\n');
   let i = 0;
   let subString = '';
@@ -93,10 +92,6 @@ function createBoxes(amount) {
     } else {
       song = textArray[i];
     }
-    console.log(song);
-
-    console.log(textArray.length - 1);
-
     let color = getRandomHexColor();
     let textColor = getRandomHexColor();
     subString += `<div style= " color:${textColor}; font-size: ${fontSize}px; text-align: center; background-color: ${color}; width : ${size}px ; height: ${size}px ; ">

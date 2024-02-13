@@ -131,10 +131,12 @@ div button {
 
 #controls button {
   margin: 0;
+  display: inline;
 }
 
 #controls input {
   width: 150px;
+
 }
 
 [data-destroy] {
